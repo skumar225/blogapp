@@ -1,0 +1,14 @@
+<h1>These are the Blog Authors</h1>
+
+<% @authors.each do |author|  %>
+
+<p>
+  
+  <%= author.first_name%>
+  <%= link_to author.last_name, author_path(author) %>
+
+</p>
+
+<% end %>
+
+<%= link_to "Add a new blog author", new_author_path%>

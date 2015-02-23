@@ -1,0 +1,8 @@
+<h1>More about the Author</h1>
+
+<p><%= @author.last_name %> <%= @author.first_name %></p>
+<p><%= @author.age %></p>
+
+<%= link_to "View more posts by this author", author_posts_path(@author) %>
+<%= link_to "Edit Info", edit_author_path(@author) %>
+<%= link_to "Homepage", author_path %>

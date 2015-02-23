@@ -1,0 +1,29 @@
+<h1>Add a new post</h1>
+<% if @post.errors.any? %>
+<% @post.errors.full_messages.each do |error|%>
+<p class="text-danger">
+  <%= error%>
+</p>
+<% end %>
+<% end %>
+
+<%= form_for ([@author, @post]) do |post| %>
+
+<p>
+  <%= post.label :title %>
+  <%= post.text_field :title%>
+</p>
+<p>
+  <%= post.label :body %>
+  <%= post.text_area :body%>
+</p>
+
+<p>
+  <%= post.label :category %>
+  <%= post.text_field :category %>
+</p>
+
+<%= post.submit %>
+
+<% end %>
+

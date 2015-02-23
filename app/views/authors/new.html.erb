@@ -1,0 +1,22 @@
+<h1>Add a new author</h1>
+<% if @author.errors.any? %>
+<% @author.errors.full_messages.each do |error|%>
+  <%= error%>
+
+<% end %>
+<% end %>
+
+<%= form_for @author do |author| %>
+
+<p>
+  <%= author.label :first_name %>
+  <%= author.text_field :first_name%>
+    <%= author.label :last_name %>
+  <%= author.text_field :last_name%>
+    <%= author.label :age %>
+  <%= author.text_field :age %>
+</p>
+
+<%= author.submit %>
+
+<% end %>
